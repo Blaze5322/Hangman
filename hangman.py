@@ -6,8 +6,8 @@ import json
 # ---------------- PAGE CONFIG ----------------
 
 st.set_page_config(
-    page_title="🎮 Hangman Pro",
-    page_icon="🎯",
+    page_title=" Hangman Pro",
+    page_icon="",
     layout="wide"
 )
 
@@ -239,7 +239,7 @@ if st.session_state.wrong >= len(HANGMAN)-1:
 st.markdown(
     f"""
     <div class="score-box">
-    🏆 Score: {st.session_state.score}<br>
+    Score: {st.session_state.score}<br>
     ❌ Wrong Attempts: {st.session_state.wrong}
     </div>
     """,
@@ -266,7 +266,7 @@ if st.session_state.game_over:
 
 # ---------------- LEADERBOARD DISPLAY ----------------
 
-st.subheader("🏅 Leaderboard")
+st.subheader("Leaderboard")
 
 try:
     with open("leaderboard.json") as f:
@@ -277,3 +277,4 @@ try:
             st.write(f"{i+1}. ⭐ {s}")
 except:
     st.write("No scores yet.")
+
